@@ -20,7 +20,7 @@ resource "azurerm_virtual_network" "labbrazil" {
 resource "azurerm_subnet" "labbrazil" {
   name                 = "lab-brazil-subnet"
   resource_group_name  = azurerm_resource_group.labbrazil.name
-  virtual_network_name = azurerm_resource_group.labbrazil.name
+  virtual_network_name = azurerm_virtual_network.labbrazil.name
   address_prefixes     = ["10.0.2.0/24"]
 }
 
